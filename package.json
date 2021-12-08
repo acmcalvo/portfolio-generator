@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/acmcalvo/portfolio-generator/issues"
   },
-  "homepage": "https://github.com/acmcalvo/portfolio-generator#readme"
+  "homepage": "https://github.com/acmcalvo/portfolio-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }
