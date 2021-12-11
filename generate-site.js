@@ -34,3 +34,7 @@ const copyFile = () => {
   });
 };
 
+module.exports = {
+    writeFile: writeFile,
+    copyFile: copyFile
+  };
