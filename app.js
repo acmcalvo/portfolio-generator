@@ -1,6 +1,6 @@
-const generateSite = require('./utils/generate-site.js');
 const inquirer = require('inquirer');
-const generatePage = require('./src/page-template.js');
+const generatePage = require('./src/page-template');
+const { writeFile, copyFile } = require('./utils/generate-site');
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -129,12 +129,6 @@ Add a New Project
 promptUser()
   .then(promptProject)
   .then(portfolioData => {
-    const pageHTML = generatePage(portfolioData);
-
-    // change the path to look like this
-    promptUser()
-  .then(promptProject)
-  .then(portfolioData => {
     return generatePage(portfolioData);
   })
   .then(pageHTML => {
@@ -150,5 +144,3 @@ promptUser()
   .catch(err => {
     console.log(err);
   });
-  });
-  
